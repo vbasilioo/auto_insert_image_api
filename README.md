@@ -5,8 +5,8 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/vbasilio/auto_insert_image_api">
-    <img src="https://www.upload.ee/image/17349608/logo.png" alt="Logo" width="260" height="100">
+  <a href="https://github.com/vbasilioo/auto_insert_image_api">
+    <img src="https://www.upload.ee/image/17349608/logo.png" alt="Logo" width="260" height="70">
   </a>
 
   <h3 align="center">AUTO Insert Image API</h3>
@@ -14,7 +14,7 @@
   <p align="center">
     API desenvolvida com Laravel 11, PHP 8.2, Pest para testes e Docker.
     <br />
-    <a href="https://github.com/vbasilio/auto_insert_image_api"><strong>Explore a documentação »</strong></a>
+    <a href="https://github.com/vbasilioo/auto_insert_image_api"><strong>Explore a documentação »</strong></a>
   </p>
 </div>
 
@@ -27,13 +27,10 @@
     <li><a href="#uso">Uso</a></li>
     <li><a href="#documentação-das-rotas">Documentação das Rotas</a></li>
     <li><a href="#testes-automatizados">Testes Automatizados</a></li>
-    <li><a href="#contato">Contato</a></li>
   </ol>
 </details>
 
 ## Sobre o Projeto
-
-[![Product Screenshot][product-screenshot]](https://example.com)
 
 API para gestão de imagens utilizando Laravel 11 e Docker, com testes automatizados configurados em Pest para alta cobertura. Esta API permite consumir imagens da The Cat API, salvá-las em um banco de dados e listá-las de forma paginada.
 
@@ -113,6 +110,8 @@ Os testes implementados incluem:
 
 - **ImageServiceTest**: Verifica a funcionalidade de paginação das imagens e a resposta correta quando não há imagens.
 - **TheCatServiceTest**: Testa a função de cadastro de imagens únicas e a persistência das mesmas no banco de dados.
+
+[![Testes](https://www.upload.ee/image/17349715/testes.png)](https://www.upload.ee/image/17349715/testes.png)
 
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 [contributors-url]: https://github.com/vbasilio/auto_insert_image_api/graphs/contributors
