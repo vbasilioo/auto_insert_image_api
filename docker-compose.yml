@@ -1,0 +1,43 @@
+version: "3.3"
+
+services:
+    api:
+      image: webdevops/php-nginx:8.2-alpine
+      container_name: api
+      restart: unless-stopped
+      ports:
+        - "${APP_PORT:-80}:80"
+      volumes:
+        - ./:/app
+      environment:
+          WEB_DOCUMENT_ROOT: /app/public
+      depends_on:
+        - db
+      networks:
+        - app-networks
+
+    db:
+      image: mysql/mysql-server:8.0
+      container_name: db
+      restart: unless-stopped
+      ports:
+          - '${FORWARD_DB_PORT:-3306}:3306'
+      environment:
+          MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+          MYSQL_DATABASE: '${DB_DATABASE}'
+          MYSQL_USER: '${DB_USERNAME}'
+          MYSQL_PASSWORD: '${DB_PASSWORD}'
+      volumes:
+        - 'storage_db:/var/lib/mysql/'
+      networks:
+          - app-networks
+
+networks:
+    app-networks:
+        driver: bridge
+
+volumes:
+    storage_api:
+        driver: local
+    storage_db:
+        driver: local
